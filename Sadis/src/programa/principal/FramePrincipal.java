@@ -96,7 +96,7 @@ public class FramePrincipal extends JFrame {
 		contentPane.add(status);
 		
 		final JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "item 1", "item 2"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Ciencias da Computação", "Sistemas de Informação"}));
 		comboBox.setToolTipText("\r\n");
 		comboBox.setBounds(195, 161, 118, 20);
 		contentPane.add(comboBox);
@@ -105,10 +105,10 @@ public class FramePrincipal extends JFrame {
 				if(comboBox.getSelectedItem()==""){
 					escolha=0;
 					
-				}if(comboBox.getSelectedItem()=="item 1"){
+				}if(comboBox.getSelectedItem()=="Ciencias da Computação"){
 					escolha=1;
 					
-				}if(comboBox.getSelectedItem()=="item 2"){
+				}if(comboBox.getSelectedItem()=="Sistemas de Informação"){
 					escolha=2;
 					
 				}
