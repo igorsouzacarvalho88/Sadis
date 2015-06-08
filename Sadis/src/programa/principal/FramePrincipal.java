@@ -14,6 +14,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import universidade.*;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import java.awt.Font;
 
 
 public class FramePrincipal extends JFrame {
@@ -43,7 +46,7 @@ public class FramePrincipal extends JFrame {
 		setTitle("Sadis - Sistema de aproveitamento de disciplinas");
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 300, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -70,7 +73,7 @@ public class FramePrincipal extends JFrame {
 				}
 			}
 		});
-		btnIniciar.setBounds(61, 228, 89, 23);
+		btnIniciar.setBounds(20, 228, 89, 23);
 		contentPane.add(btnIniciar);
 
 		JButton btnFechar = new JButton("Fechar");
@@ -79,46 +82,38 @@ public class FramePrincipal extends JFrame {
 				dispose();
 			}
 		});
-		btnFechar.setBounds(284, 228, 89, 23);
+		btnFechar.setBounds(145, 228, 89, 23);
 		contentPane.add(btnFechar);
 
-		final JCheckBox checkCiencias = new JCheckBox(
-				"Ciencias da Computa\u00E7\u00E3o");
-
-		checkCiencias.setBounds(252, 152, 176, 23);
-		contentPane.add(checkCiencias);
-
-		final JCheckBox checkSistemas = new JCheckBox(
-				"Sistemas de Informa\u00E7\u00E3o");
-		checkSistemas.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				// se clicar em sistemas de informação faz com que tire o clique
-				// de ciencias da computação e poe a variavel escolha como 2
-				escolha = 2;
-				checkCiencias.setSelected(false);
-			}
-		});
-
-		checkCiencias.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				// se clicar em ciencias da computação faz com que tire o clique
-				// de sistemas e poe a variavel escolha como 1
-				escolha = 1;
-				checkSistemas.setSelected(false);
-			}
-		});
-		checkSistemas.setBounds(252, 188, 167, 23);
-		contentPane.add(checkSistemas);
-
 		JLabel lblEscolhaOCurso = new JLabel("Escolha o curso pretendido");
-		lblEscolhaOCurso.setBounds(20, 172, 160, 14);
+		lblEscolhaOCurso.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblEscolhaOCurso.setBounds(59, 164, 237, 14);
 		contentPane.add(lblEscolhaOCurso);
 
 		JLabel status = new JLabel();
 		// status.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-		status.setBounds(159, 0, 118, 131);
+		status.setBounds(83, 11, 118, 131);
 		status.setIcon(new ImageIcon("img/sadis3.jpg"));
 		contentPane.add(status);
+		
+		final JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Ciencias da Computação", "Sistemas de Informação"}));
+		comboBox.setBounds(60, 189, 174, 20);
+		contentPane.add(comboBox);
+		comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(comboBox.getSelectedItem()==""){
+					escolha=0;
+					
+				}if(comboBox.getSelectedItem()=="Ciencias da Computação"){
+					escolha=1;
+					
+				}if(comboBox.getSelectedItem()=="Sistemas de Informação"){
+					escolha=2;
+					
+				}
+			}
+		});
 
 	}
 }
