@@ -17,6 +17,7 @@ import universidade.*;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.Font;
+import java.awt.Toolkit;
 
 
 public class FramePrincipal extends JFrame {
@@ -43,6 +44,7 @@ public class FramePrincipal extends JFrame {
 	 * Create the frame.
 	 */
 	public FramePrincipal() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\thiago\\git\\Sadis\\Sadis\\sadis3.jpg"));
 		setTitle("Sadis - Sistema de aproveitamento de disciplinas");
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
