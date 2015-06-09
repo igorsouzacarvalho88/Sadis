@@ -69,6 +69,11 @@ public class FramePrincipal extends JFrame {
 					FrameSolicitacao frame = new FrameSolicitacao(curso);
 					frame.setVisible(true);
 				}
+				if(escolha==3){
+					Curso curso = new Curso("Licenciatura da Computação", 3);
+					FrameSolicitacao frame = new FrameSolicitacao(curso);
+					frame.setVisible(true);
+				}
 				if (escolha == 0) {
 					JOptionPane.showMessageDialog(null,
 							"Escolha o curso de destino antes de começar");
@@ -99,7 +104,7 @@ public class FramePrincipal extends JFrame {
 		contentPane.add(status);
 		
 		final JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Ciencias da Computação", "Sistemas de Informação"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Ciencias da Computação", "Sistemas de Informação","Licenciatura da Computação"}));
 		comboBox.setBounds(60, 189, 174, 20);
 		contentPane.add(comboBox);
 		comboBox.addActionListener(new ActionListener() {
@@ -112,6 +117,9 @@ public class FramePrincipal extends JFrame {
 					
 				}if(comboBox.getSelectedItem()=="Sistemas de Informação"){
 					escolha=2;
+					
+				}if(comboBox.getSelectedItem()=="Licenciatura da Computação"){
+					escolha=3;
 					
 				}
 			}

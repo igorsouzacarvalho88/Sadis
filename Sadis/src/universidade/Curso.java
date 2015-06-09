@@ -24,9 +24,11 @@ public class Curso {
 
 			carregarDisciplinas1();
 
-		} else {
+		} if(codigo == 2) {
 
 			carregarDisciplinas2();
+		}if(codigo ==3){
+			carregarDisciplinas3();
 		}
 
 	}
