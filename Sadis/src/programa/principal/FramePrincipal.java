@@ -15,7 +15,7 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.Font;
 import java.awt.Toolkit;
-//oi
+
 
 public class FramePrincipal extends JFrame {
 	private short escolha = 0;
