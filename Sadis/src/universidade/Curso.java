@@ -197,7 +197,7 @@ public class Curso {
 				"Projeto Final do Curso II", "MATA67", (short) 136);
 			
 		// adicionando disciplinas como pre-requisitos para a lista de
-		// pre-requisitos da disciplina2
+		// pre-requisitos da disciplina1
 
 		disciplina7.setPreRequisitos(disciplina1.getCodigo());
 		disciplina8.setPreRequisitos(disciplina2.getCodigo());
@@ -496,7 +496,183 @@ public class Curso {
 		disciplinas.add(disciplina36);
 	}
 		
-	
+	//Matematica todos os cursos colocados.
+	public void carregarDisciplinas4() {
+
+		// instanciando disciplinas
+
+		Disciplina disciplina1 = new Disciplina(
+				"DESENHO GEOMETRICO I","ARQ005", (short) 68);
+
+		Disciplina disciplina2 = new Disciplina(
+				"MATEMATICA FINANCEIRA ", "MAT191", (short) 68);
+
+		Disciplina disciplina3 = new Disciplina(
+				"FUNDAMENTOS DE MATEMATICA ELEMENTAR I","MAT198", (short) 68);
+
+		Disciplina disciplina4 = new Disciplina(
+				"FUNDAMENTOS DE MATEMATICA ELEMENTAR II", "MAT199", (short) 68);
+		
+		Disciplina disciplina5 = new Disciplina(
+				"PROCESSAMENTO DE DADOS ", "MAT045", (short) 68);
+		
+		Disciplina disciplina6 = new Disciplina(
+				"INTRODUÇÃO À TEORIA DOS NÚMEROS ", "MATB32", (short) 68);
+		
+		Disciplina disciplina7 = new Disciplina(
+				"LIMITES E DERIVADAS ", "MATB33", (short) 68);
+		
+		Disciplina disciplina8 = new Disciplina(
+				"GEOMETRIA ANALÍTICA E ÁLGEBRA VETORIAL ", "MATB34", (short) 68);
+		
+		Disciplina disciplina9 = new Disciplina(
+				"ESTATÍSTICA BÁSICA A ", "MATB59", (short) 68);
+		
+		Disciplina disciplina10 = new Disciplina(
+				"FISICA GERAL E EXPERIMENTAL I", "FIS121", (short) 68);
+		
+		Disciplina disciplina11 = new Disciplina(
+				"INTRODUÇÃO À ANÁLISE COMBINATÓRIA ", "MATB31", (short) 68);
+		
+		Disciplina disciplina12 = new Disciplina(
+				"GRUPOS E ANÉIS I ", "MATB35", (short) 68);
+		
+		Disciplina disciplina13 = new Disciplina(
+				"INTEGRAIS E FUNÇÕES DE VÁRIAS VARIÁVEIS ", "MATB37", (short) 68);
+		
+		Disciplina disciplina14 = new Disciplina(
+				"ÁLGEBRA LINEAR I", "MATB38", (short) 68);
+		
+		Disciplina disciplina15 = new Disciplina(
+				"FISICA GERAL E EXPERIMENTAL II", "FIS122", (short) 68);
+		
+		Disciplina disciplina16 = new Disciplina(
+				"GRUPOS E ANÉIS II ", "MATB36", (short) 68);
+		
+		Disciplina disciplina17 = new Disciplina(
+				"SEQUÊNCIAS, SÉRIES E EDO ", "MATB40", (short) 68);
+		
+		Disciplina disciplina18 = new Disciplina(
+				"ÁLGEBRA LINEAR II", "MATB41", (short) 68);
+		
+		Disciplina disciplina19 = new Disciplina(
+				"FISICA GERAL E EXPERIMENTAL III", "FIS123", (short) 68);
+		
+		Disciplina disciplina20 = new Disciplina(
+				"CALCULO NUMÉRICO I ", "MAT174", (short) 68);
+		
+		Disciplina disciplina21 = new Disciplina(
+				"CÁLCULO DIFERENCIAL VETORIAL ", "MATB43", (short) 68);
+		
+		Disciplina disciplina22 = new Disciplina(
+				"ANÁLISE I ", "MATB44", (short) 68);
+		
+		Disciplina disciplina23 = new Disciplina(
+				"ALGEBRA III - INTRODUCAO À TEORIA DE GALOIS ", "MAT205", (short) 68);
+		
+		Disciplina disciplina24 = new Disciplina(
+				"TOPOLOGIA E ESPAÇOS MÉTRICOS ", "MATB50", (short) 68);
+		
+		Disciplina disciplina25 = new Disciplina(
+				"TEORIA DAS EQUAÇÕES DIFERENCIAIS ORDINÁRIAS ", "MATB51", (short) 68);
+		
+		Disciplina disciplina26 = new Disciplina(
+				"ANÁLISE II ", "MATB52", (short) 68);
+		
+		Disciplina disciplina27 = new Disciplina(
+				"ESTATISTICA III", "MAT028", (short) 68);
+		
+		Disciplina disciplina28 = new Disciplina(
+				"GEOMETRIA DIFERENCIAL ", "MAT208", (short) 68);
+		
+		Disciplina disciplina29 = new Disciplina(
+				"FUNÇÕES HOLOMORFAS ", "MATB46", (short) 68);
+		
+		Disciplina disciplina30 = new Disciplina(
+				"ANÁLISE III ", "MATB53", (short) 68);
+		
+		Disciplina disciplina31 = new Disciplina(
+				"ESTÁGIO SUPERVISIONADO ", "MATB54", (short) 68);
+		
+		Disciplina disciplina32 = new Disciplina(
+				"SEMINÁRIOS TEMÁTICOS ", "MATB49", (short) 68);
+		
+		Disciplina disciplina33 = new Disciplina(
+				"MONOGRAFIA ", "MATB55", (short) 68);
+		
+		
+		// adicionando disciplinas como pre-requisitos para a lista de
+		// pre-requisitos da disciplina4
+
+		disciplina10.setPreRequisitos(disciplina7.getCodigo());
+		disciplina10.setPreRequisitos(disciplina8.getCodigo());
+		disciplina13.setPreRequisitos(disciplina7.getCodigo());
+		disciplina13.setPreRequisitos(disciplina8.getCodigo());
+		disciplina14.setPreRequisitos(disciplina8.getCodigo());
+		disciplina15.setPreRequisitos(disciplina10.getCodigo());
+		disciplina16.setPreRequisitos(disciplina12.getCodigo());
+		disciplina17.setPreRequisitos(disciplina13.getCodigo());
+		disciplina18.setPreRequisitos(disciplina14.getCodigo());
+		disciplina19.setPreRequisitos(disciplina13.getCodigo());
+		disciplina19.setPreRequisitos(disciplina15.getCodigo());
+		disciplina20.setPreRequisitos(disciplina5.getCodigo());
+		disciplina20.setPreRequisitos(disciplina14.getCodigo());
+		disciplina20.setPreRequisitos(disciplina17.getCodigo());
+		disciplina21.setPreRequisitos(disciplina13.getCodigo());
+		disciplina22.setPreRequisitos(disciplina17.getCodigo());
+		disciplina23.setPreRequisitos(disciplina12.getCodigo());
+		disciplina24.setPreRequisitos(disciplina22.getCodigo());
+		disciplina25.setPreRequisitos(disciplina14.getCodigo());
+		disciplina25.setPreRequisitos(disciplina17.getCodigo());
+		disciplina26.setPreRequisitos(disciplina22.getCodigo());
+		disciplina27.setPreRequisitos(disciplina17.getCodigo());
+		disciplina28.setPreRequisitos(disciplina18.getCodigo());
+		disciplina28.setPreRequisitos(disciplina21.getCodigo());
+		disciplina29.setPreRequisitos(disciplina13.getCodigo());
+		disciplina30.setPreRequisitos(disciplina21.getCodigo());
+		disciplina31.setPreRequisitos(disciplina26.getCodigo());
+		disciplina32.setPreRequisitos(disciplina13.getCodigo());
+		disciplina33.setPreRequisitos(disciplina23.getCodigo());
+		disciplina33.setPreRequisitos(disciplina28.getCodigo());
+		disciplina33.setPreRequisitos(disciplina30.getCodigo());
+		
+		// adicionando disciplinas na lista de disciplinas
+
+		disciplinas.add(disciplina1);
+		disciplinas.add(disciplina2);
+		disciplinas.add(disciplina3);
+		disciplinas.add(disciplina4);
+		disciplinas.add(disciplina5);
+		disciplinas.add(disciplina6);
+		disciplinas.add(disciplina7);
+		disciplinas.add(disciplina8);
+		disciplinas.add(disciplina9);
+		disciplinas.add(disciplina10);
+		disciplinas.add(disciplina11);
+		disciplinas.add(disciplina12);
+		disciplinas.add(disciplina13);
+		disciplinas.add(disciplina14);
+		disciplinas.add(disciplina15);
+		disciplinas.add(disciplina16);
+		disciplinas.add(disciplina17);
+		disciplinas.add(disciplina18);
+		disciplinas.add(disciplina19);
+		disciplinas.add(disciplina20);
+		disciplinas.add(disciplina21);
+		disciplinas.add(disciplina22);
+		disciplinas.add(disciplina23);
+		disciplinas.add(disciplina24);
+		disciplinas.add(disciplina25);
+		disciplinas.add(disciplina26);
+		disciplinas.add(disciplina27);
+		disciplinas.add(disciplina28);
+		disciplinas.add(disciplina29);
+		disciplinas.add(disciplina30);
+		disciplinas.add(disciplina31);
+		disciplinas.add(disciplina32);
+		disciplinas.add(disciplina33);
+		
+	}
 
 
 	// public static void imprimeCursos(List<Curso> cursos) {
