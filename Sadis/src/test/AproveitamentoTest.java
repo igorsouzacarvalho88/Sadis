@@ -22,8 +22,8 @@ public class AproveitamentoTest {
 
 			disciplinasTest.add("MATA01");
 			disciplinasTest.add("MATA02");
-			disciplinasTest.add("MATA04");
-			disciplinasTest.add("MATA24");
+//			disciplinasTest.add("MATA04");
+//			disciplinasTest.add("MATA24");
 
 			Solicitacao solicitacao = new Solicitacao();	
 			
