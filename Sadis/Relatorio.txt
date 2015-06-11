@@ -1,8 +1,12 @@
-Segunda-feira, 8 de Junho de 2015
+Quinta-feira, 11 de Junho de 2015
 
 Relatorio 
 
+<<<<<<< HEAD
 Número de protocolo: 219094316
+=======
+Número de protocolo: 186855044
+>>>>>>> branch 'master' of https://github.com/igorsouzacarvalho88/Sadis
 
 Nome: A
 
@@ -16,4 +20,4 @@ justificativa do processo de aproveitamento
 
 
  As disciplinas aproveitas foram:
- [EDCB80]
+ []

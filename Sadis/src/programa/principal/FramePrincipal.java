@@ -3,16 +3,13 @@ package programa.principal;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import universidade.*;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
@@ -73,6 +70,10 @@ public class FramePrincipal extends JFrame {
 					Curso curso = new Curso("Licenciatura da Computação", 3);
 					FrameSolicitacao frame = new FrameSolicitacao(curso);
 					frame.setVisible(true);
+				}if(escolha==4){
+					Curso curso = new Curso("Matemática", 4);
+					FrameSolicitacao frame = new FrameSolicitacao(curso);
+					frame.setVisible(true);
 				}
 				if (escolha == 0) {
 					JOptionPane.showMessageDialog(null,
@@ -104,7 +105,7 @@ public class FramePrincipal extends JFrame {
 		contentPane.add(status);
 		
 		final JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Ciencias da Computação", "Sistemas de Informação","Licenciatura da Computação"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Ciencias da Computação", "Sistemas de Informação","Licenciatura da Computação","Matemática"}));
 		comboBox.setBounds(60, 189, 174, 20);
 		contentPane.add(comboBox);
 		comboBox.addActionListener(new ActionListener() {
@@ -120,6 +121,9 @@ public class FramePrincipal extends JFrame {
 					
 				}if(comboBox.getSelectedItem()=="Licenciatura da Computação"){
 					escolha=3;
+					
+				}if(comboBox.getSelectedItem()=="Matemática"){
+					escolha=4;
 					
 				}
 			}
