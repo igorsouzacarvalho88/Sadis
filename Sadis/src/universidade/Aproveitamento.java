@@ -7,6 +7,7 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class Aproveitamento {
+	
 
 	// atributos do aproveitamento
 
@@ -14,7 +15,7 @@ public class Aproveitamento {
 
 	// metodo set combinado com o aproveitamento em geral
 	public void setDisciplinasAproveitadas(Solicitacao solicitacao, Curso curso) {
-
+		this.disciplinasAproveitadas.add(null);
 		// a variavel abaixo serve para a comparacao das disciplinas que o aluno
 
 		for (Disciplina item1 : curso.getDisciplinasDoCurso()) {
@@ -47,7 +48,7 @@ public class Aproveitamento {
 								+ "a serem aproveitadas dentre as que voce solicitou.");
 				break;
 			}
-		}
+		}if(this.disciplinasAproveitadas.get(0) == null)this.disciplinasAproveitadas.remove(0);
 	}
 
 	public List<String> getDisciplinasAproveitadas() {

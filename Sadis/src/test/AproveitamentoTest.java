@@ -20,16 +20,17 @@ public class AproveitamentoTest {
 			List <String> disciplinasTest = new ArrayList<String>();
 			
 
-			disciplinasTest.add("MATA01");
+			disciplinasTest.add("MATA68");
 			disciplinasTest.add("MATA02");
-//			disciplinasTest.add("MATA04");
-//			disciplinasTest.add("MATA24");
-
+			disciplinasTest.add("MATA37");
+			disciplinasTest.add("MATC90");
+			disciplinasTest.add("MATA39");
+			disciplinasTest.add("MATA42");
 			Solicitacao solicitacao = new Solicitacao();	
 			
 			solicitacao.setDisciplinas(disciplinasTest);
 			
-			Curso curso = new Curso("Ciencias da Computação", 1);
+			Curso curso = new Curso("Ciencias da Computação", 2);
 			
 
 			Aproveitamento aproveitamento = new Aproveitamento();
@@ -40,9 +41,12 @@ public class AproveitamentoTest {
 			
 			List<String> listaExpected = new ArrayList<String>();
 			
-			listaExpected.add("MATA01");
+			listaExpected.add("MATA68");
 			listaExpected.add("MATA02");
-		//	listaExpected.add("MATA03");
+			listaExpected.add("MATA37");
+			listaExpected.add("MATC90");
+			listaExpected.add("MATA39");
+			listaExpected.add("MATA42");
 
 			if (listaExpected.contains(aproveitamento.getDisciplinasAproveitadas()) 
 					|| listaExpected.size() == aproveitamento.getDisciplinasAproveitadas().size()) {

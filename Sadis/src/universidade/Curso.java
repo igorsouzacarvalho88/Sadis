@@ -293,7 +293,7 @@ public class Curso {
 
 		// instanciando disciplinas
 
-		Disciplina disciplina1 = new Disciplina("Computador, Ética e Sociedade ","MATA68 ", (short) 51);
+		Disciplina disciplina1 = new Disciplina("Computador, Ética e Sociedade ","MATA68", (short) 51);
 
 		Disciplina disciplina2 = new Disciplina("Introdução à Lógica de Programação", "MATA37", (short) 68);
 
@@ -524,7 +524,7 @@ public class Curso {
 				"Avalção de Apredizagem","EDC286", (short) 68);
 			
 		Disciplina disciplina25 = new Disciplina(
-				"Estágio Supervisionado 1","MATC68,", (short) 68);
+				"Estágio Supervisionado 1","MATC68", (short) 68);
 			
 		Disciplina disciplina26= new Disciplina(
 				"Interação Humano-Computador","MATC72", (short) 68);
