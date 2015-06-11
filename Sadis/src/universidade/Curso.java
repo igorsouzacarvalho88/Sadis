@@ -288,29 +288,122 @@ public class Curso {
 		disciplinas.add(disciplina36);
 	}
 
+	//Sistemas de Informação, cursos obrigatorios colocados
 	public void carregarDisciplinas2() {
 
 		// instanciando disciplinas
 
-		Disciplina disciplina1 = new Disciplina("Sistemas Operacionais",
-				"MATA01", (short) 68);
+		Disciplina disciplina1 = new Disciplina("Computador, Ética e Sociedade ","MATA68 ", (short) 51);
 
-		Disciplina disciplina2 = new Disciplina(
-				"Empreendedores em Informatica", "MATA02", (short) 68);
+		Disciplina disciplina2 = new Disciplina("Introdução à Lógica de Programação", "MATA37", (short) 68);
 
-		Disciplina disciplina3 = new Disciplina("Fundamentos de Economia",
-				"MATA03", (short) 68);
+		Disciplina disciplina3 = new Disciplina("Matemática Discreta I", "MATA42", (short) 68);
 
-		Disciplina disciplina4 = new Disciplina(
-				"Programação de Software Basico", "MATA04", (short) 68);
+		Disciplina disciplina4 = new Disciplina("Cálculo A", "MATA02", (short) 102);
+		
+		Disciplina disciplina5 = new Disciplina("Seminários de Introdução ao Curso", "MATA39", (short) 51);
+		
+		Disciplina disciplina6 = new Disciplina("Circuitos Digitais e Arquitetura de Computadores ", "MATC90", (short) 68);
+		
+		Disciplina disciplina7 = new Disciplina("Estruturas de Dados", "MATD04", (short) 68);
+		
+		Disciplina disciplina8 = new Disciplina("Introdução a Lógica Matemática", "MATC73", (short) 68);
+		
+		Disciplina disciplina9 = new Disciplina("Fundamentos de Sistemas de Informação", "MATC92", (short) 68);
+		
+		Disciplina disciplina10 = new Disciplina("Economia da Inovação", "ADME99", (short) 68);
+		
+		Disciplina disciplina11 = new Disciplina("Sistemas Operacionais", "MATA58", (short) 68);
+		
+		Disciplina disciplina12 = new Disciplina("Programação Orientada a Objetos", "MATA55", (short) 68);
+		
+		Disciplina disciplina13 = new Disciplina("Introdução as Linguagens Formais e Teoria da Computação ", "MATC94", (short) 68);	
+		
+		Disciplina disciplina14 = new Disciplina("Álgebra Linear A", "MATA07", (short) 68);
+		
+		Disciplina disciplina15 = new Disciplina("Introdução à Administração", "ADM001", (short) 68);
+		
+		Disciplina disciplina16 = new Disciplina("Oficina de Leitura e Produção de Textos", "LETA09", (short) 68);
+		
+		Disciplina disciplina17 = new Disciplina("Redes de Computadores I", "MATA59", (short) 68);
+		
+		Disciplina disciplina18 = new Disciplina("Engenharia de Software I", "MATA62", (short) 68);
+		
+		Disciplina disciplina19 = new Disciplina("Métodos Estatísticos", "MAT236", (short) 68);
+		
+		Disciplina disciplina20 = new Disciplina("Sistemas Web", "MATC82", (short) 68);
+		
+		Disciplina disciplina21 = new Disciplina("Banco de Dados", "MATA60", (short) 68);
+		
+		Disciplina disciplina22 = new Disciplina("Paradigmas de Linguagens de Programação", "MATA56", (short) 68);
+		
+		Disciplina disciplina23 = new Disciplina("Engenharia de Software II", "MATA63", (short) 68);
+		
+		Disciplina disciplina24 = new Disciplina("Métodos Quantitativos", "ADM211", (short) 68);
+		
+		Disciplina disciplina25 = new Disciplina("Laboratório de Programação Web ", "MATC84", (short) 51);
+		
+		Disciplina disciplina26 = new Disciplina("Laboratório de Banco de Dados", "MATB09", (short) 51);
+		
+		Disciplina disciplina27 = new Disciplina("Linguagens para Aplicação Comercial ", "MATA76", (short) 51);
+		
+		Disciplina disciplina28 = new Disciplina("Aplicações para Dispositivos Móveis", "MATc89", (short) 68);
+		
+		Disciplina disciplina29 = new Disciplina("Sistemas de Apoio à Decisão", "ADMF01", (short) 85);
+		
+		Disciplina disciplina30 = new Disciplina("Empreendedores em Informática", "MAT220", (short) 68);
+		
+		Disciplina disciplina31 = new Disciplina("Interação Humano Computador", "MATC72", (short) 68);
+		
+		Disciplina disciplina32 = new Disciplina("Sistemas Multimídia", "MATB19", (short) 68);
+		
+		Disciplina disciplina33 = new Disciplina("Qualidade de Software", "MATB02", (short) 51);
+		
+		Disciplina disciplina34 = new Disciplina("Inteligência Artificial", "MATA64", (short) 68);
+		
+		Disciplina disciplina35 = new Disciplina("Segurança e Auditoria de Sistemas de Informação", "MATC99", (short) 68);
+		
+		Disciplina disciplina36 = new Disciplina("Trabalho de Conclusão de Curso BSI I", "MATC97", (short) 51);
+		
+		Disciplina disciplina37 = new Disciplina("Trabalho de Conclusão de Curso BSI II", "MATC98", (short) 136);
 		
 		// adicionando disciplinas como pre-requisitos para a lista de
 		// pre-requisitos da disciplina2
 
-		disciplina2.setPreRequisitos(disciplina1.getCodigo());
-		disciplina3.setPreRequisitos(disciplina1.getCodigo());
-		disciplina3.setPreRequisitos(disciplina2.getCodigo());
-		disciplina4.setPreRequisitos(disciplina3.getCodigo());
+		disciplina7.setPreRequisitos(disciplina2.getCodigo());
+		disciplina7.setPreRequisitos(disciplina3.getCodigo());
+		disciplina8.setPreRequisitos(disciplina3.getCodigo());
+		disciplina11.setPreRequisitos(disciplina6.getCodigo());
+		disciplina12.setPreRequisitos(disciplina7.getCodigo());
+		disciplina13.setPreRequisitos(disciplina3.getCodigo());
+		disciplina17.setPreRequisitos(disciplina6.getCodigo());
+		disciplina18.setPreRequisitos(disciplina12.getCodigo());
+		disciplina19.setPreRequisitos(disciplina4.getCodigo());
+		disciplina19.setPreRequisitos(disciplina14.getCodigo());
+		disciplina20.setPreRequisitos(disciplina9.getCodigo());
+		disciplina20.setPreRequisitos(disciplina11.getCodigo());
+		disciplina21.setPreRequisitos(disciplina7.getCodigo());
+		disciplina22.setPreRequisitos(disciplina12.getCodigo());
+		disciplina23.setPreRequisitos(disciplina18.getCodigo());
+		disciplina24.setPreRequisitos(disciplina15.getCodigo());
+		disciplina24.setPreRequisitos(disciplina19.getCodigo());
+		disciplina25.setPreRequisitos(disciplina12.getCodigo());
+		disciplina26.setPreRequisitos(disciplina21.getCodigo());
+		disciplina27.setPreRequisitos(disciplina7.getCodigo());
+		disciplina28.setPreRequisitos(disciplina17.getCodigo());
+		disciplina28.setPreRequisitos(disciplina12.getCodigo());
+		disciplina29.setPreRequisitos(disciplina24.getCodigo());
+		disciplina31.setPreRequisitos(disciplina18.getCodigo());
+		disciplina32.setPreRequisitos(disciplina12.getCodigo());
+		disciplina33.setPreRequisitos(disciplina23.getCodigo());
+		disciplina34.setPreRequisitos(disciplina8.getCodigo());
+		disciplina34.setPreRequisitos(disciplina7.getCodigo());
+		disciplina35.setPreRequisitos(disciplina14.getCodigo());
+		disciplina35.setPreRequisitos(disciplina29.getCodigo());
+		disciplina36.setPreRequisitos(disciplina16.getCodigo());
+		disciplina37.setPreRequisitos(disciplina36.getCodigo());
+		
+		
 		
 		// adicionando disciplinas na lista de disciplinas
 
@@ -318,6 +411,39 @@ public class Curso {
 		disciplinas.add(disciplina2);
 		disciplinas.add(disciplina3);
 		disciplinas.add(disciplina4);
+		disciplinas.add(disciplina5);
+		disciplinas.add(disciplina6);
+		disciplinas.add(disciplina7);
+		disciplinas.add(disciplina8);
+		disciplinas.add(disciplina9);
+		disciplinas.add(disciplina10);
+		disciplinas.add(disciplina11);
+		disciplinas.add(disciplina12);
+		disciplinas.add(disciplina13);
+		disciplinas.add(disciplina14);
+		disciplinas.add(disciplina15);
+		disciplinas.add(disciplina16);
+		disciplinas.add(disciplina17);
+		disciplinas.add(disciplina18);
+		disciplinas.add(disciplina19);
+		disciplinas.add(disciplina20);
+		disciplinas.add(disciplina21);
+		disciplinas.add(disciplina22);
+		disciplinas.add(disciplina23);
+		disciplinas.add(disciplina24);
+		disciplinas.add(disciplina25);
+		disciplinas.add(disciplina26);
+		disciplinas.add(disciplina27);
+		disciplinas.add(disciplina28);
+		disciplinas.add(disciplina29);
+		disciplinas.add(disciplina30);
+		disciplinas.add(disciplina31);
+		disciplinas.add(disciplina32);
+		disciplinas.add(disciplina33);
+		disciplinas.add(disciplina34);
+		disciplinas.add(disciplina35);
+		disciplinas.add(disciplina36);
+		disciplinas.add(disciplina37);
 	}
 	
 	//Licenciatura da Computação todos os cursos colocados.
