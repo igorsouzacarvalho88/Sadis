@@ -14,8 +14,11 @@ public class Aproveitamento {
 	private List<String> disciplinasAproveitadas = new ArrayList<String>();
 
 	// metodo set combinado com o aproveitamento em geral
+	
 	public void setDisciplinasAproveitadas(Solicitacao solicitacao, Curso curso) {
+		
 		this.disciplinasAproveitadas.add(null);
+		
 		// a variavel abaixo serve para a comparacao das disciplinas que o aluno
 
 		for (Disciplina item1 : curso.getDisciplinasDoCurso()) {
