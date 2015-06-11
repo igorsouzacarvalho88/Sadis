@@ -2,17 +2,13 @@ Quinta-feira, 11 de Junho de 2015
 
 Relatorio 
 
-<<<<<<< HEAD
-Número de protocolo: 219094316
-=======
-Número de protocolo: 186855044
->>>>>>> branch 'master' of https://github.com/igorsouzacarvalho88/Sadis
+Número de protocolo: 630786482
 
 Nome: A
 
-Matricula: A
+Matricula: a
 
-Telefone: A
+Telefone: a
 
 Email: A
 
@@ -20,4 +16,4 @@ justificativa do processo de aproveitamento
 
 
  As disciplinas aproveitas foram:
- []
+ [MATA01]
