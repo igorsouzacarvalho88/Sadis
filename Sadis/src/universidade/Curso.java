@@ -347,7 +347,7 @@ public class Curso {
 		
 		Disciplina disciplina27 = new Disciplina("Linguagens para Aplicação Comercial ", "MATA76", (short) 51);
 		
-		Disciplina disciplina28 = new Disciplina("Aplicações para Dispositivos Móveis", "MATc89", (short) 68);
+		Disciplina disciplina28 = new Disciplina("Aplicações para Dispositivos Móveis", "MATC89", (short) 68);
 		
 		Disciplina disciplina29 = new Disciplina("Sistemas de Apoio à Decisão", "ADMF01", (short) 85);
 		
