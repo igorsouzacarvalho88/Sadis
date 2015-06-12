@@ -2,20 +2,25 @@ Sexta-feira, 12 de Junho de 2015
 
 Relatorio 
 
+<<<<<<< HEAD
 Número de protocolo: 631756686
+=======
+Número de protocolo: 699789137
+>>>>>>> branch 'master' of https://github.com/igorsouzacarvalho88/Sadis
 
-Nome: A
+Nome: RAFAEL COIMBRA
 
-Matricula: a
+Matricula: 122314115
 
-Telefone: a
+Telefone: 923913104
 
-Email: A
+Email: RAFAELCOIMBRA@GMAIL.COM
 
 justificativa do processo de aproveitamento
 
 
  As disciplinas aproveitas foram:
+<<<<<<< HEAD
  [MATA01]
 
 Sexta-feira, 12 de Junho de 2015
@@ -38,3 +43,6 @@ justificativa do processo de aproveitamento
  As disciplinas aproveitas foram:
  [MATA02]
 
+=======
+ []
+>>>>>>> branch 'master' of https://github.com/igorsouzacarvalho88/Sadis
