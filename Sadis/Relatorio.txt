@@ -1,8 +1,8 @@
-Quinta-feira, 11 de Junho de 2015
+Sexta-feira, 12 de Junho de 2015
 
 Relatorio 
 
-Número de protocolo: 630786482
+Número de protocolo: 631756686
 
 Nome: A
 
@@ -17,3 +17,24 @@ justificativa do processo de aproveitamento
 
  As disciplinas aproveitas foram:
  [MATA01]
+
+Sexta-feira, 12 de Junho de 2015
+
+Relatorio 
+
+Número de protocolo: 592211033
+
+Nome: B
+
+Matricula: b
+
+Telefone: b
+
+Email: B
+
+justificativa do processo de aproveitamento
+
+
+ As disciplinas aproveitas foram:
+ [MATA02]
+

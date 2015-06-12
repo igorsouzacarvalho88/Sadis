@@ -38,32 +38,32 @@ public class FrameRelatorio extends JFrame {
 						FrameRelatorio.obterDataPorExtenso(dataAtual)
 								+ "\nOs dados do aluno são:\n\n\n Número de protocolo: "
 								+ protocolo + "\n\nNome: "
-								+ solicitacao.getAlunoNome()
+								+ solicitacao.getNome()
 								+ " \n\nMatricula: "
-								+ solicitacao.getAlunoMatricula()
+								+ solicitacao.getMatricula()
 								+ " \n\nTelefone: "
-								+ solicitacao.getAlunoTelefone()
-								+ " \n\nEmail: " + solicitacao.getAlunoEmail()
+								+ solicitacao.getTelefone()
+								+ " \n\nEmail: " + solicitacao.getEmail()
 								+ "\nAs disciplinas aproveitas foram:\n "
 								+ aproveitamento.getDisciplinasAproveitadas());
 
 		// impressão em txt os dados da solicitação
 		FileWriter relatorio;
 		try {
-			relatorio = new FileWriter("Relatorio.txt");
+			relatorio = new FileWriter("Relatorio.txt",true);
 			PrintWriter gravarArq = new PrintWriter(relatorio);
 			gravarArq.printf(FrameRelatorio.obterDataPorExtenso(dataAtual)
 					+ "%n%nRelatorio %n%n");
 
 			gravarArq.printf("Número de protocolo: " + protocolo + "%n%nNome: "
-					+ solicitacao.getAlunoNome() + "%n%nMatricula: "
-					+ solicitacao.getAlunoMatricula() + "%n%nTelefone: "
-					+ solicitacao.getAlunoTelefone() + "%n%nEmail: "
-					+ solicitacao.getAlunoEmail()
+					+ solicitacao.getNome() + "%n%nMatricula: "
+					+ solicitacao.getMatricula() + "%n%nTelefone: "
+					+ solicitacao.getTelefone() + "%n%nEmail: "
+					+ solicitacao.getEmail()
 					+ "%n%njustificativa do processo de aproveitamento" + "%n"
 					+ solicitacao.getEsclarecimentoSolicitacao()
 					+ "%n%n As disciplinas aproveitas foram:%n "
-					+ aproveitamento.getDisciplinasAproveitadas());
+					+ aproveitamento.getDisciplinasAproveitadas()+"%n%n");
 			relatorio.close();
 		} catch (IOException e) {
 			System.out.println("Ocorreu um erro na criação do relatorio");

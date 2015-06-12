@@ -188,10 +188,10 @@ public class FrameSolicitacao extends JFrame {
 				} else {
 					//se não tiver em branco ele seta todos os atributos
 					
-					solicitacao.setAlunoNome(nome.getText().toUpperCase());
-					solicitacao.setAlunoMatricula(matricula.getText());
-					solicitacao.setAlunoTelefone(telefone.getText());
-					solicitacao.setAlunoEmail(email.getText().toUpperCase());
+					solicitacao.setNome(nome.getText().toUpperCase());
+					solicitacao.setMatricula(matricula.getText());
+					solicitacao.setTelefone(telefone.getText());
+					solicitacao.setEmail(email.getText().toUpperCase());
 					solicitacao.setEsclarecimentoSolicitacao(justificativa.getText());
 					
 					JOptionPane.showMessageDialog(null,

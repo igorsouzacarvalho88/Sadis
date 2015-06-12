@@ -7,9 +7,9 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class Solicitacao {
+public class Solicitacao extends Aluno {
 
-	public Aluno aluno = new Aluno();
+/*	public Aluno aluno = new Aluno();*/
 
 	private String esclarecimentoSolicitacao;
 
@@ -17,35 +17,35 @@ public class Solicitacao {
 
 	
 	// metodos getters and setters para as
-	public String getAlunoNome() {
+	/*public String getAlunoNome() {
 	
-		return aluno.getNome();
+		return getNome();
 	
 	}
 	
 	public String getAlunoEmail() {
 	
-		return aluno.getEmail();
+		return getEmail();
 	
 	}
 
 	public String getAlunoTelefone() {
 	
-		return aluno.getTelefone();
+		return getTelefone();
 	
 	}
 
 	public String getAlunoMatricula() {
 	
-		return aluno.getMatricula();
+		return getMatricula();
 	
 	}
 	
 	public void setAlunoNome(String nome) {
 	
-		this.aluno.setNome(nome);
+		this.setNome(nome);
 	
-	}
+	}*/
 	
 	public String getEsclarecimentoSolicitacao() {
 	
@@ -59,21 +59,21 @@ public class Solicitacao {
 	
 	}
 	
-	public void setAlunoMatricula(String matricula) {
+	/*public void setAlunoMatricula(String matricula) {
 	
-		this.aluno.setMatricula(matricula);
+		this.setMatricula(matricula);
 	
 	}
 	
 	public void setAlunoTelefone(String telefone) {
 	
-		this.aluno.setTelefone(telefone);
+		this.setTelefone(telefone);
 	
 	}
 	
 	public void setAlunoEmail(String email) {
 	
-		this.aluno.setEmail(email);
+		this.setEmail(email);
 	
 	}
 	
@@ -82,7 +82,7 @@ public class Solicitacao {
 		this.aluno = aluno;
 	
 	}
-
+*/
 
 	public void setEsclarecimentoSolicitacao(String esclarecimentoSolicitacao) {
 	
