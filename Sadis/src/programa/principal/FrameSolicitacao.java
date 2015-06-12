@@ -14,9 +14,12 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import test.AlunoDAO;
+import test.IAlunoDAO;
 import universidade.Aproveitamento;
 import universidade.Curso;
 import universidade.Solicitacao;
+
 import java.awt.Toolkit;
 
 public class FrameSolicitacao extends JFrame {
@@ -188,11 +191,14 @@ public class FrameSolicitacao extends JFrame {
 				} else {
 					//se não tiver em branco ele seta todos os atributos
 					
-					solicitacao.setAlunoNome(nome.getText().toUpperCase());
-					solicitacao.setAlunoMatricula(matricula.getText());
-					solicitacao.setAlunoTelefone(telefone.getText());
-					solicitacao.setAlunoEmail(email.getText().toUpperCase());
+					solicitacao.getAluno().setNome(nome.getText().toUpperCase());
+					solicitacao.getAluno().setMatricula(matricula.getText());
+					solicitacao.getAluno().setTelefone(telefone.getText());
+					solicitacao.getAluno().setEmail(email.getText().toUpperCase());
 					solicitacao.setEsclarecimentoSolicitacao(justificativa.getText());
+					
+					//SALVA O ALUNO NO BANCO DE DADOS
+					daoAluno.addAluno(solicitacao.getAluno());
 					
 					JOptionPane.showMessageDialog(null,
 							"Solicitação enviada com sucesso");
@@ -223,7 +229,7 @@ public class FrameSolicitacao extends JFrame {
 	// instancia solicitação e aproveitamento
 
 	Solicitacao solicitacao = new Solicitacao();
-
+	private IAlunoDAO daoAluno = new AlunoDAO();
 	Aproveitamento aproveitamento = new Aproveitamento();
 
 	private JLabel lblExMata;

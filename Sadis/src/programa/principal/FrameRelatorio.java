@@ -38,12 +38,12 @@ public class FrameRelatorio extends JFrame {
 						FrameRelatorio.obterDataPorExtenso(dataAtual)
 								+ "\nOs dados do aluno são:\n\n\n Número de protocolo: "
 								+ protocolo + "\n\nNome: "
-								+ solicitacao.getAlunoNome()
+								+ solicitacao.getAluno().getNome()
 								+ " \n\nMatricula: "
-								+ solicitacao.getAlunoMatricula()
+								+ solicitacao.getAluno().getMatricula()
 								+ " \n\nTelefone: "
-								+ solicitacao.getAlunoTelefone()
-								+ " \n\nEmail: " + solicitacao.getAlunoEmail()
+								+ solicitacao.getAluno().getTelefone()
+								+ " \n\nEmail: " + solicitacao.getAluno().getEmail()
 								+ "\nAs disciplinas aproveitas foram:\n "
 								+ aproveitamento.getDisciplinasAproveitadas());
 
@@ -56,10 +56,10 @@ public class FrameRelatorio extends JFrame {
 					+ "%n%nRelatorio %n%n");
 
 			gravarArq.printf("Número de protocolo: " + protocolo + "%n%nNome: "
-					+ solicitacao.getAlunoNome() + "%n%nMatricula: "
-					+ solicitacao.getAlunoMatricula() + "%n%nTelefone: "
-					+ solicitacao.getAlunoTelefone() + "%n%nEmail: "
-					+ solicitacao.getAlunoEmail()
+					+ solicitacao.getAluno().getNome() + "%n%nMatricula: "
+					+ solicitacao.getAluno().getMatricula() + "%n%nTelefone: "
+					+ solicitacao.getAluno().getTelefone() + "%n%nEmail: "
+					+ solicitacao.getAluno().getEmail()
 					+ "%n%njustificativa do processo de aproveitamento" + "%n"
 					+ solicitacao.getEsclarecimentoSolicitacao()
 					+ "%n%n As disciplinas aproveitas foram:%n "

@@ -16,35 +16,8 @@ public class Solicitacao {
 	private List<String> disciplinasTest = new ArrayList<String>();
 
 	
-	// metodos getters and setters para as
-	public String getAlunoNome() {
-	
-		return aluno.getNome();
-	
-	}
-	
-	public String getAlunoEmail() {
-	
-		return aluno.getEmail();
-	
-	}
-
-	public String getAlunoTelefone() {
-	
-		return aluno.getTelefone();
-	
-	}
-
-	public String getAlunoMatricula() {
-	
-		return aluno.getMatricula();
-	
-	}
-	
-	public void setAlunoNome(String nome) {
-	
-		this.aluno.setNome(nome);
-	
+	public Aluno getAluno(){
+		return this.aluno;
 	}
 	
 	public String getEsclarecimentoSolicitacao() {
