@@ -1,4 +1,4 @@
-package test;
+package connexaoBD;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,7 +18,6 @@ public class DatabaseHelper {
 	            String driverName = "com.mysql.jdbc.Driver";                          
 	            Class.forName(driverName); // Instancia o driver utilizado para conexão com o MYSQL
 	            String novaUrl = "jdbc:mysql://localhost:3306/sadis";
-	            String url = "jdbc:mysql://localhost/sadis";  
 	            String username = "root";        //nome de um usuário de seu BD        
 	            String password = "";      //sua senha de acesso  
 	            

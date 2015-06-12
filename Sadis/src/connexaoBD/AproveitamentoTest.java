@@ -1,4 +1,4 @@
-package test;
+package connexaoBD;
 
 import static org.junit.Assert.fail;
 

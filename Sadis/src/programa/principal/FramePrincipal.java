@@ -12,12 +12,13 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import test.AlunoDAO;
-import test.IAlunoDAO;
 import universidade.*;
 
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+
+import connexaoBD.AlunoDAO;
+import connexaoBD.IAlunoDAO;
 
 import java.awt.Font;
 import java.awt.Toolkit;

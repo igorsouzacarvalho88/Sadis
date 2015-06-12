@@ -14,8 +14,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import test.AlunoDAO;
-import test.IAlunoDAO;
+import connexaoBD.AlunoDAO;
+import connexaoBD.IAlunoDAO;
 import universidade.Aproveitamento;
 import universidade.Curso;
 import universidade.Solicitacao;

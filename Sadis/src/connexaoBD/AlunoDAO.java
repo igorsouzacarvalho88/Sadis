@@ -1,4 +1,4 @@
-package test;
+package connexaoBD;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -43,7 +43,7 @@ public class AlunoDAO implements IAlunoDAO {
 		 Statement stm;
 		try {
 			stm = (Statement) conn.createStatement();
-			 stm.executeQuery("DELETE aluno  WHERE matricula = '"+matricula+"'");
+			 stm.executeQuery("DELETE FROM aluno  WHERE matricula = '"+matricula+"'");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Não foi possivel deletar aluno!");
@@ -55,6 +55,7 @@ public class AlunoDAO implements IAlunoDAO {
 	@Override//Atualização de aluno no DB.
 	public void updateAluno(Aluno aluno) {
 		// TODO Auto-generated method stub
+		  
 		
 		
 	
@@ -63,3 +64,6 @@ public class AlunoDAO implements IAlunoDAO {
 	}
 
 }
+
+
+
