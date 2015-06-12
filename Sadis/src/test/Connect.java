@@ -14,11 +14,12 @@ public class Connect
             
             String password = "";
             
-            String url = "jdbc:mysql://localhost/Sadis";
+            String url = "jdbc:mysql://localhost/sadis";
             
             Class.forName ("com.mysql.jdbc.Driver");  
             
-            conn = DriverManager.getConnection (url, userName, password);
+            conn = DriverManager. 
+            		getConnection (url, userName, password);
             
             System.out.println ("Conexão com o BD estabelecida!");
         }
