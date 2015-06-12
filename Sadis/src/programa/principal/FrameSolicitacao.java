@@ -38,7 +38,7 @@ public class FrameSolicitacao extends JFrame {
 	private JButton btnOk;
 
 	public FrameSolicitacao(final Curso curso) {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\thiago\\git\\Sadis\\Sadis\\sadis3.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("Sadis\\sadis3.jpg"));
 		setTitle("Formulario de Solicitação");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 486, 604);

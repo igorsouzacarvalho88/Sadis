@@ -68,20 +68,24 @@ public class FramePrincipal extends JFrame {
 					Curso curso = new Curso("Ciencias da Computação", 1);
 					FrameSolicitacao frame = new FrameSolicitacao(curso);
 					frame.setVisible(true);
+					dispose();
 				}
 				if (escolha == 2) {
 					Curso curso = new Curso("Sistemas de Informação", 2);
 					FrameSolicitacao frame = new FrameSolicitacao(curso);
 					frame.setVisible(true);
+					dispose();
 				}
 				if(escolha==3){
 					Curso curso = new Curso("Licenciatura da Computação", 3);
 					FrameSolicitacao frame = new FrameSolicitacao(curso);
 					frame.setVisible(true);
+					dispose();
 				}if(escolha==4){
 					Curso curso = new Curso("Matemática", 4);
 					FrameSolicitacao frame = new FrameSolicitacao(curso);
 					frame.setVisible(true);
+					dispose();
 				}
 				if (escolha == 0) {
 					JOptionPane.showMessageDialog(null,
