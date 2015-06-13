@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import universidade.Solicitacao;
+
 
 
 
@@ -16,8 +18,8 @@ public class SolicitacaoDAO implements ISolicitacaoDAO{
     	conn = DatabaseHelper.getConnection();
 	}
 
-	public void addSolicitacao(String solicitacao) {
-		String insert = "INSERT into solicitacao (justificativa) value ('"+solicitacao+"')";
+	public void addSolicitacao(Solicitacao solicitacao) {
+		String insert = "INSERT into solicitacao (justificativa,matricula) value ('"+solicitacao.getEsclarecimentoSolicitacao()+"','"+solicitacao.getMatricula()+"')";
 		try {
 			PreparedStatement stm = conn.prepareStatement(insert); 
 		

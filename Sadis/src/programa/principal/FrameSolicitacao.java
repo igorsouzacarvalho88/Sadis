@@ -203,7 +203,7 @@ public class FrameSolicitacao extends JFrame {
 					daoAluno.addAluno(solicitacao);
 					
 					//SAlLVAR SOLICITACAO NO BANCO DE DADOS
-					daoSolicitacao.addSolicitacao(solicitacao.getEsclarecimentoSolicitacao());
+					daoSolicitacao.addSolicitacao(solicitacao);
 					
 					JOptionPane.showMessageDialog(null,
 							"Solicitação enviada com sucesso");

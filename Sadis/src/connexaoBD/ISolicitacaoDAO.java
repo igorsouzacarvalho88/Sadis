@@ -1,10 +1,13 @@
 package connexaoBD;
 
+import universidade.Solicitacao;
+
 
 //import universidade.Solicitacao;
 
 public interface ISolicitacaoDAO {
-	public void addSolicitacao(String solicitacao);
+	public void addSolicitacao(Solicitacao solicitacao);
+	
 	
 
 }
