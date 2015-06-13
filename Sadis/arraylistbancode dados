@@ -1,0 +1,22 @@
+public List pegaClientes(){ 
+
+List<Cliente> lista = new ArrayList<Cliente>(); 
+
+String query = "SELECT nome, endereco, telefone, empresa, email, registro from cliente"; 
+try { 
+
+ResultSet rs = statement.executeQuery(query); 
+
+while(rs.next()){ 
+Cliente cli = new Cliente(rs.getString(4), rs.getString(1), 
+rs.getString(2), rs.getString(5), rs.getString(3), rs.getString(6)); 
+lista.add(cli); 
+} 
+statement.close(); 
+} 
+catch(SQLException e){ 
+e.printStackTrace(); 
+} 
+return lista; 
+
+}
