@@ -1,6 +1,7 @@
 package programa.principal;
 
 import java.awt.EventQueue;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,6 +26,10 @@ import java.awt.Toolkit;
 
 
 public class FramePrincipal extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private short escolha = 0;
 	private JPanel contentPane;
 

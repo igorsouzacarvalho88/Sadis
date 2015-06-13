@@ -14,9 +14,14 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import connexaoBD.AlunoDAO;
+import connexaoBD.IAlunoDAO;
+import connexaoBD.ISolicitacaoDAO;
+import connexaoBD.SolicitacaoDAO;
 import universidade.Aproveitamento;
 import universidade.Curso;
 import universidade.Solicitacao;
+
 import java.awt.Toolkit;
 
 public class FrameSolicitacao extends JFrame {
@@ -38,7 +43,7 @@ public class FrameSolicitacao extends JFrame {
 	private JButton btnOk;
 
 	public FrameSolicitacao(final Curso curso) {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("Sadis\\sadis3.jpg"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\thiago\\git\\Sadis\\Sadis\\sadis3.jpg"));
 		setTitle("Formulario de Solicitação");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 486, 604);
@@ -194,6 +199,12 @@ public class FrameSolicitacao extends JFrame {
 					solicitacao.setEmail(email.getText().toUpperCase());
 					solicitacao.setEsclarecimentoSolicitacao(justificativa.getText());
 					
+					//SALVA O ALUNO NO BANCO DE DADOS
+					daoAluno.addAluno(solicitacao);
+					
+					//SAlLVAR SOLICITACAO NO BANCO DE DADOS
+					daoSolicitacao.addSolicitacao(solicitacao.getEsclarecimentoSolicitacao());
+					
 					JOptionPane.showMessageDialog(null,
 							"Solicitação enviada com sucesso");
 
@@ -223,7 +234,8 @@ public class FrameSolicitacao extends JFrame {
 	// instancia solicitação e aproveitamento
 
 	Solicitacao solicitacao = new Solicitacao();
-
+	private IAlunoDAO daoAluno = new AlunoDAO();
+	private ISolicitacaoDAO daoSolicitacao = new SolicitacaoDAO();
 	Aproveitamento aproveitamento = new Aproveitamento();
 
 	private JLabel lblExMata;
