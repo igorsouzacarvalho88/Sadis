@@ -18,8 +18,8 @@ public class SolicitacaoDAO implements ISolicitacaoDAO{
     	conn = DatabaseHelper.getConnection();
 	}
 
-	public void addSolicitacao(Solicitacao solicitacao) {
-		String insert = "INSERT into solicitacao (justificativa,matricula) value ('"+solicitacao.getEsclarecimentoSolicitacao()+"','"+solicitacao.getMatricula()+"')";
+	public void addSolicitacao(Solicitacao solicitacao, int protocolo) {
+		String insert = "INSERT into solicitacao (justificativa,matricula,protocolo) value ('"+solicitacao.getEsclarecimentoSolicitacao()+"','"+solicitacao.getMatricula()+"','"+protocolo+"')";
 		try {
 			PreparedStatement stm = conn.prepareStatement(insert); 
 		
@@ -33,3 +33,4 @@ public class SolicitacaoDAO implements ISolicitacaoDAO{
 
 	
 }
+

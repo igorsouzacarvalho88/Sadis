@@ -1,6 +1,7 @@
 package programa.principal;
 
 import java.awt.BorderLayout;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,6 +14,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import connexaoBD.AlunoDAO;
+import connexaoBD.IAlunoDAO;
+import connexaoBD.ISolicitacaoDAO;
+import connexaoBD.SolicitacaoDAO;
 import universidade.Aproveitamento;
 import universidade.Solicitacao;
 
@@ -73,6 +78,21 @@ public class FrameRelatorio extends JFrame {
 					.showMessageDialog(null,
 							"Uma relatorio com os dados da solicitação foi criado em workspace/Sadis");
 		}
+		
+		
+		
+	
+		
+		IAlunoDAO daoAluno = new AlunoDAO();
+		ISolicitacaoDAO daoSolicitacao = new SolicitacaoDAO();
+		
+		//SAlLVAR SOLICITACAO NO BANCO DE DADOS
+		daoSolicitacao.addSolicitacao(solicitacao,protocolo);
+		
+		//SALVAR O ALUNO NO BANCO DE DADOS
+		daoAluno.addAluno(solicitacao);
+		
+		
 
 	}
 
@@ -80,4 +100,10 @@ public class FrameRelatorio extends JFrame {
 		DateFormat dfmt = new SimpleDateFormat("EEEE, d 'de' MMMM 'de' yyyy");
 		return dfmt.format(dataAtual);
 	}
+	
+
+	
+	
+	
+	
 }

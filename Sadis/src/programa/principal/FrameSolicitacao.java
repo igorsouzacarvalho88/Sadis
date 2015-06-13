@@ -1,6 +1,7 @@
 package programa.principal;
 
 import java.awt.event.ActionEvent;
+
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -200,10 +201,10 @@ public class FrameSolicitacao extends JFrame {
 					solicitacao.setEsclarecimentoSolicitacao(justificativa.getText());
 					
 					//SALVA O ALUNO NO BANCO DE DADOS
-					daoAluno.addAluno(solicitacao);
+					//daoAluno.addAluno(solicitacao);
 					
 					//SAlLVAR SOLICITACAO NO BANCO DE DADOS
-					daoSolicitacao.addSolicitacao(solicitacao);
+					//daoSolicitacao.addSolicitacao(solicitacao);
 					
 					JOptionPane.showMessageDialog(null,
 							"Solicitação enviada com sucesso");
@@ -234,8 +235,8 @@ public class FrameSolicitacao extends JFrame {
 	// instancia solicitação e aproveitamento
 
 	Solicitacao solicitacao = new Solicitacao();
-	private IAlunoDAO daoAluno = new AlunoDAO();
-	private ISolicitacaoDAO daoSolicitacao = new SolicitacaoDAO();
+	//private IAlunoDAO daoAluno = new AlunoDAO();
+	//private ISolicitacaoDAO daoSolicitacao = new SolicitacaoDAO();
 	Aproveitamento aproveitamento = new Aproveitamento();
 
 	private JLabel lblExMata;
