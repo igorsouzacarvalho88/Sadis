@@ -143,7 +143,7 @@ public class FrameSolicitacao extends JFrame {
 							.getText().toUpperCase())) {
 
 						JOptionPane.showMessageDialog(null,
-								"Disciplina já cadastrada!");
+								"Disciplina " + codigoMateria.getText().toUpperCase() + " - já cadastrada!");
 
 					} else {
 						// se não existir mostra o codigo que vc acabou de
