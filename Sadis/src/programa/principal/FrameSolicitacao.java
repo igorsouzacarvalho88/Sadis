@@ -26,6 +26,7 @@ import universidade.Solicitacao;
 import java.awt.Toolkit;
 import javax.swing.JCheckBoxMenuItem;
 import java.awt.Label;
+import java.awt.Color;
 
 public class FrameSolicitacao extends JFrame {
 
@@ -44,6 +45,7 @@ public class FrameSolicitacao extends JFrame {
 	private JLabel lblEmail;
 	private JTextField codigoMateria;
 	private JButton btnOk;
+	private JButton btnConsulta;
 	private JLabel dicipsol;
 
 	public FrameSolicitacao(final Curso curso) {
@@ -52,6 +54,7 @@ public class FrameSolicitacao extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 486, 604);
 		contentPane = new JPanel();
+		contentPane.setForeground(Color.RED);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		JButton btnEnviar = new JButton("Enviar");
@@ -113,7 +116,7 @@ public class FrameSolicitacao extends JFrame {
 				// seja limpo sempre que clicar nele
 			}
 		});
-		codigoMateria.setBounds(35, 246, 68, 20);
+		codigoMateria.setBounds(35, 225, 68, 20);
 		contentPane.add(codigoMateria);
 		codigoMateria.setColumns(10);
 		
@@ -122,11 +125,8 @@ public class FrameSolicitacao extends JFrame {
 		lblInsiraOCodigo.setBounds(25, 204, 383, 14);
 		contentPane.add(lblInsiraOCodigo);
 
-		btnOk = new JButton("Ok");
-		
-		
+		btnOk = new JButton("Ok");		
 		btnOk.addActionListener(new ActionListener() {
-			//arqui1
 			public void actionPerformed(ActionEvent e) {
 
 				// verifica se o campo codigo esta com espa�os em branco
@@ -154,7 +154,6 @@ public class FrameSolicitacao extends JFrame {
 						if (n.contains(codigoMateria.getText().toUpperCase())){
 							JOptionPane.showMessageDialog(null, "Disciplina não encontrada");
 						} else{
-							dicipsol.setText(n);
 							solicitacao.getDisciplinas().add(codigoMateria.getText().toUpperCase());
 							JOptionPane.showMessageDialog(null, "Disciplina " + codigoMateria.getText().toUpperCase() + " - " + n + " cadastrada com sucesso");
 						}
@@ -162,7 +161,7 @@ public class FrameSolicitacao extends JFrame {
 				}
 			}
 		});
-		btnOk.setBounds(113, 245, 89, 23);
+		btnOk.setBounds(113, 225, 89, 23);
 		contentPane.add(btnOk);
 		JLabel lblFormulrioDeSolicitao;
 		lblFormulrioDeSolicitao = new JLabel(
@@ -172,12 +171,12 @@ public class FrameSolicitacao extends JFrame {
 
 		lblExMata = new JLabel(
 				"Ex: MATA01 ( Clique em ok ) MATA02 ( Clique em ok )...");
-		lblExMata.setBounds(25, 277, 383, 14);
+		lblExMata.setBounds(25, 275, 383, 14);
 		contentPane.add(lblExMata);
 
 		lblAoAdicionarTodas = new JLabel(
 				"Ao adicionar todas as matérias clique em Enviar.");
-		lblAoAdicionarTodas.setBounds(25, 302, 383, 14);
+		lblAoAdicionarTodas.setBounds(25, 325, 383, 14);
 		contentPane.add(lblAoAdicionarTodas);
 		
 		JLabel lblI = new JLabel("Espaço para justificativa do processo de aproveitamento");
@@ -189,8 +188,29 @@ public class FrameSolicitacao extends JFrame {
 		contentPane.add(justificativa);
 		
 		dicipsol = new JLabel(" ");
-		dicipsol.setBounds(206, 246, 224, 20);
+		dicipsol.setForeground(Color.RED);
+		dicipsol.setBounds(25, 249, 224, 20);
 		contentPane.add(dicipsol);
+		
+		JLabel lblConsultaVerificaA = new JLabel("Consulta: verifica o nome da matéria.");
+		lblConsultaVerificaA.setBounds(25, 300, 187, 14);
+		contentPane.add(lblConsultaVerificaA);
+		
+		JButton btnConsulta = new JButton("Consulta");
+		btnConsulta.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String m = codigoMateria.getText().toUpperCase();
+				m = curso.VerificaNome(m);
+				//Verifica se a Disciplina solicitada está cadastrada
+				if (m.contains(codigoMateria.getText().toUpperCase())){
+					JOptionPane.showMessageDialog(null, "Disciplina não encontrada");
+				} else{
+					dicipsol.setText(m);
+				}
+			}
+		});
+		btnConsulta.setBounds(213, 225, 89, 23);
+		contentPane.add(btnConsulta);
 		
 		btnEnviar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) { // EVENTO ao clicar
