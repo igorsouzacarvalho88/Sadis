@@ -113,7 +113,7 @@ public class FrameSolicitacao extends JFrame {
 				// seja limpo sempre que clicar nele
 			}
 		});
-		codigoMateria.setBounds(155, 246, 68, 20);
+		codigoMateria.setBounds(35, 246, 68, 20);
 		contentPane.add(codigoMateria);
 		codigoMateria.setColumns(10);
 		
@@ -150,18 +150,19 @@ public class FrameSolicitacao extends JFrame {
 						// cadastrar e adiciona ele na lista
 						String n = codigoMateria.getText().toUpperCase();
 						n = curso.VerificaNome(n);
-						dicipsol.setText(n);
-						solicitacao.getDisciplinas().add(codigoMateria.getText()
-								.toUpperCase());
-
-						JOptionPane.showMessageDialog(null, "Disciplina " + codigoMateria.getText().toUpperCase() + " - " + n + " cadastrada com sucesso");
-
+						//Verifica se a Disciplina solicitada está cadastrada
+						if (n.contains(codigoMateria.getText().toUpperCase())){
+							JOptionPane.showMessageDialog(null, "Disciplina não encontrada");
+						} else{
+							dicipsol.setText(n);
+							solicitacao.getDisciplinas().add(codigoMateria.getText().toUpperCase());
+							JOptionPane.showMessageDialog(null, "Disciplina " + codigoMateria.getText().toUpperCase() + " - " + n + " cadastrada com sucesso");
+						}
 					}
-
 				}
 			}
 		});
-		btnOk.setBounds(255, 245, 89, 23);
+		btnOk.setBounds(113, 245, 89, 23);
 		contentPane.add(btnOk);
 		JLabel lblFormulrioDeSolicitao;
 		lblFormulrioDeSolicitao = new JLabel(
@@ -171,12 +172,12 @@ public class FrameSolicitacao extends JFrame {
 
 		lblExMata = new JLabel(
 				"Ex: MATA01 ( Clique em ok ) MATA02 ( Clique em ok )...");
-		lblExMata.setBounds(25, 270, 383, 14);
+		lblExMata.setBounds(25, 277, 383, 14);
 		contentPane.add(lblExMata);
 
 		lblAoAdicionarTodas = new JLabel(
 				"Ao adicionar todas as matérias clique em Enviar.");
-		lblAoAdicionarTodas.setBounds(25, 295, 383, 14);
+		lblAoAdicionarTodas.setBounds(25, 302, 383, 14);
 		contentPane.add(lblAoAdicionarTodas);
 		
 		JLabel lblI = new JLabel("Espaço para justificativa do processo de aproveitamento");
@@ -188,7 +189,7 @@ public class FrameSolicitacao extends JFrame {
 		contentPane.add(justificativa);
 		
 		dicipsol = new JLabel(" ");
-		dicipsol.setBounds(25, 315, 383, 48);
+		dicipsol.setBounds(206, 246, 224, 20);
 		contentPane.add(dicipsol);
 		
 		btnEnviar.addActionListener(new ActionListener() {

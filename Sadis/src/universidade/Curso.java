@@ -76,7 +76,7 @@ public class Curso {
 
 	}
 
-	// metodos de processamento
+	// Retorna o nome da materia atraves do codigo dela
 	public String VerificaNome(String cod) {
 		for (Disciplina item : this.disciplinas) {
 				if (cod.contains(item.getCodigo())){
