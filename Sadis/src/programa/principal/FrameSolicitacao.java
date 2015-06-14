@@ -24,6 +24,8 @@ import universidade.Curso;
 import universidade.Solicitacao;
 
 import java.awt.Toolkit;
+import javax.swing.JCheckBoxMenuItem;
+import java.awt.Label;
 
 public class FrameSolicitacao extends JFrame {
 
@@ -42,6 +44,7 @@ public class FrameSolicitacao extends JFrame {
 	private JLabel lblEmail;
 	private JTextField codigoMateria;
 	private JButton btnOk;
+	private JLabel dicipsol;
 
 	public FrameSolicitacao(final Curso curso) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\thiago\\git\\Sadis\\Sadis\\sadis3.jpg"));
@@ -113,14 +116,17 @@ public class FrameSolicitacao extends JFrame {
 		codigoMateria.setBounds(155, 246, 68, 20);
 		contentPane.add(codigoMateria);
 		codigoMateria.setColumns(10);
-
+		
 		JLabel lblInsiraOCodigo = new JLabel(
 				"Insira o codigo das diciplinas, uma a uma e clique em Ok");
 		lblInsiraOCodigo.setBounds(25, 204, 383, 14);
 		contentPane.add(lblInsiraOCodigo);
 
 		btnOk = new JButton("Ok");
+		
+		
 		btnOk.addActionListener(new ActionListener() {
+			//arqui1
 			public void actionPerformed(ActionEvent e) {
 
 				// verifica se o campo codigo esta com espa�os em branco
@@ -142,13 +148,13 @@ public class FrameSolicitacao extends JFrame {
 					} else {
 						// se não existir mostra o codigo que vc acabou de
 						// cadastrar e adiciona ele na lista
-
+						String n = codigoMateria.getText().toUpperCase();
+						n = curso.VerificaNome(n);
+						dicipsol.setText(n);
 						solicitacao.getDisciplinas().add(codigoMateria.getText()
 								.toUpperCase());
 
-						JOptionPane.showMessageDialog(null, "Disciplina "
-								+ codigoMateria.getText().toUpperCase()
-								+ " cadastrada com sucesso");
+						JOptionPane.showMessageDialog(null, "Disciplina " + codigoMateria.getText().toUpperCase() + " - " + n + " cadastrada com sucesso");
 
 					}
 
@@ -180,6 +186,10 @@ public class FrameSolicitacao extends JFrame {
 		final JEditorPane justificativa = new JEditorPane();
 		justificativa.setBounds(35, 394, 373, 98);
 		contentPane.add(justificativa);
+		
+		dicipsol = new JLabel(" ");
+		dicipsol.setBounds(25, 315, 383, 48);
+		contentPane.add(dicipsol);
 		
 		btnEnviar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) { // EVENTO ao clicar

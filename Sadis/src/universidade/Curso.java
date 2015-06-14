@@ -77,17 +77,16 @@ public class Curso {
 	}
 
 	// metodos de processamento
-	// public void imprimeDisciplinas() {
-	//
-	// System.out.println("As Disciplinas Cadastradas Do Curso de "+this.nome+" são\n");
-	//
-	// for (Disciplina item : this.disciplinas) {
-	//
-	// System.out.println(item.getNome());
-	//
-	// }
-	//
-	// }
+	public String VerificaNome(String cod) {
+		for (Disciplina item : this.disciplinas) {
+				if (cod.contains(item.getCodigo())){
+					cod =  item.getNome();
+						
+				}
+		}
+		return cod;
+	
+	}
 
 	// metodo para carregamento das disciplinas para teste em memória
 	//Ciencias da ComputaÃ§Ã£o, cursos obrigatorios colocados
