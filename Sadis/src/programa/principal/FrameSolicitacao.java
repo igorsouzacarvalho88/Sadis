@@ -135,7 +135,6 @@ public class FrameSolicitacao extends JFrame {
 
 					JOptionPane.showMessageDialog(null,
 							"Campo código esta em branco!");
-
 				} else {
 					// se nao tiver em branco testa para ver se o codigo
 					// existe na lista
