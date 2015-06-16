@@ -1,7 +1,6 @@
 package programa.principal;
 
 import java.awt.BorderLayout;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,10 +14,13 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import connexaoBD.AlunoDAO;
+import connexaoBD.CursoDAO;
 import connexaoBD.IAlunoDAO;
+import connexaoBD.ICursoDAO;
 import connexaoBD.ISolicitacaoDAO;
 import connexaoBD.SolicitacaoDAO;
 import universidade.Aproveitamento;
+import universidade.Curso;
 import universidade.Solicitacao;
 
 public class FrameRelatorio extends JFrame {
@@ -26,7 +28,7 @@ public class FrameRelatorio extends JFrame {
 	private JPanel contentPane;
 	private Date dataAtual = new Date();
 
-	public FrameRelatorio(Solicitacao solicitacao, Aproveitamento aproveitamento) {
+	public FrameRelatorio(Solicitacao solicitacao, Aproveitamento aproveitamento,Curso curso) {
 		setTitle("Relatorio");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -85,12 +87,15 @@ public class FrameRelatorio extends JFrame {
 		
 		IAlunoDAO daoAluno = new AlunoDAO();
 		ISolicitacaoDAO daoSolicitacao = new SolicitacaoDAO();
-		
+		ICursoDAO daoCurso =new CursoDAO();
 		//SAlLVAR SOLICITACAO NO BANCO DE DADOS
 		daoSolicitacao.addSolicitacao(solicitacao,protocolo);
 		
 		//SALVAR O ALUNO NO BANCO DE DADOS
 		daoAluno.addAluno(solicitacao);
+		
+		//SALVAR O Curso NO BANCO DE DADOS
+		daoCurso.addCurso(curso,solicitacao);
 		
 		
 

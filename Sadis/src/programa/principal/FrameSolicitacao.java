@@ -245,8 +245,7 @@ public class FrameSolicitacao extends JFrame {
 
 					// imprime os dados do aluno na tela
 
-					FrameRelatorio frameRelatorio = new FrameRelatorio(
-							solicitacao, aproveitamento);
+					FrameRelatorio frameRelatorio = new FrameRelatorio(solicitacao, aproveitamento,curso);
 					dispose();
 
 				}
