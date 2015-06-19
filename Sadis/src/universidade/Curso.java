@@ -36,6 +36,9 @@ public class Curso {
 			
 			carregarDisciplinas4();
 			
+		}if(codigo == 5){
+			
+			carregarDisciplinas5();
 		}
 
 	}
