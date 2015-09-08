@@ -98,13 +98,13 @@ public class Curso {
 		// instanciando disciplinas
 
 		Disciplina disciplina1 = new Disciplina(
-				"Projeto de Circuitos LÃ³gicos", "MATA38", (short) 68);
+				"Projeto de Circuitos Lógicos", "MATA38", (short) 68);
 			
 		Disciplina disciplina2 = new Disciplina(
-				"IntroduÃ§Ã£o a Linguagem de ProgramaÃ§Ã£o", "MATA37", (short) 68);
+				"Introdução a Linguagem de Programação", "MATA37", (short) 68);
 		
 		Disciplina disciplina3 = new Disciplina(
-				"Seminarios em ComputaÃ§Ã£o", "MATA39", (short) 51);
+				"Seminarios em Computação", "MATA39", (short) 51);
 			
 		Disciplina disciplina4 = new Disciplina(
 				"Matematica Discreta I", "MATA42", (short) 68);
@@ -122,7 +122,7 @@ public class Curso {
 				"Estrutura de Dados e Algoritmos I", "MATA40", (short) 68);
 			
 		Disciplina disciplina9 = new Disciplina(
-				"Laboratorio de ProgramaÃ§Ã£o I", "MATA57", (short) 51);
+				"Laboratorio de Programação I", "MATA57", (short) 51);
 			
 		Disciplina disciplina10 = new Disciplina(
 				"Matematica Discreta II", "MATA97", (short) 68);
@@ -134,22 +134,22 @@ public class Curso {
 				"Algebra Linear", "MATA07", (short) 68);
 			
 		Disciplina disciplina13 = new Disciplina(
-				"ProgramaÃ§Ã£o Orientada a Obejtos", "MATA55", (short) 68);
+				"Programação Orientada a Obejtos", "MATA55", (short) 68);
 
 		Disciplina disciplina14 = new Disciplina(
-				"ProgramaÃ§Ã£o de Software Basico", "MATA49", (short) 68);
+				"Programação de Software Basico", "MATA49", (short) 68);
 			
 		Disciplina disciplina15 = new Disciplina(
 				"Linguagem Formais e Automatos", "MATA50", (short) 68);
 			
 		Disciplina disciplina16 = new Disciplina(
-				"Logica para ComputaÃ§Ã£o", "MATA47", (short) 68);
+				"Logica para Computação", "MATA47", (short) 68);
 			
 		Disciplina disciplina17 = new Disciplina(
 				"Metodos Estatisticos", "MATA236", (short) 68);
 
 		Disciplina disciplina18 = new Disciplina(
-				"ELEMENTOS DO ELETROMAGNETISMO E DE CIRCUITOS ELÃ‰TRICOS", "FISA75", (short) 102);
+				"ELEMENTOS DO ELETROMAGNETISMO E DE CIRCUITOS ELÉTRICOS", "FISA75", (short) 102);
 			
 		Disciplina disciplina19 = new Disciplina(
 				"Compiladores", "MATA61", (short) 68);
@@ -167,10 +167,10 @@ public class Curso {
 				"Computador, Etica e Sociedade", "MATA68", (short) 51);
 			
 		Disciplina disciplina24 = new Disciplina(
-				"METODOLOGIA E EXPRESSÃƒO TÃ‰CNICO-CIENTÃ�FICA", "FCHC45", (short) 68);
+				"METODOLOGIA E EXPRESSÃO TÉCNICO-CIENTÍFICA", "FCHC45", (short) 68);
 			
 		Disciplina disciplina25 = new Disciplina(
-				"PARADIGMAS DE LINGUAGENS DE PROGRAMAÃ‡ÃƒO", "MATA56", (short) 68);
+				"PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO", "MATA56", (short) 68);
 			
 		Disciplina disciplina26 = new Disciplina(
 				"ESTRUTURAS DE DADOS E ALGORITMOS II", "MATA54", (short) 68);
@@ -197,7 +197,7 @@ public class Curso {
 				"ENGENHARIA DE SOFTWARE II", "MATA11", (short) 68);
 			
 		Disciplina disciplina34 = new Disciplina(
-				"ComputaÃ§Ã£o Grafica", "MATA65", (short) 68);
+				"Computação Grafica", "MATA65", (short) 68);
 			
 		Disciplina disciplina35 = new Disciplina(
 				"Projeto Final do Curso I", "MATA66", (short) 51);
