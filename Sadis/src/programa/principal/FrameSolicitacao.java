@@ -188,7 +188,7 @@ public class FrameSolicitacao extends JFrame {
 		
 		dicipsol = new JLabel(" ");
 		dicipsol.setForeground(Color.RED);
-		dicipsol.setBounds(25, 249, 224, 20);
+		dicipsol.setBounds(25, 249, 383, 20);
 		contentPane.add(dicipsol);
 		
 		JLabel lblConsultaVerificaA = new JLabel("Consulta: verifica o nome da matéria.");
