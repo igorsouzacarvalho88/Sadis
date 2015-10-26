@@ -126,24 +126,25 @@ public class FrameSolicitacao extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				 
 				// verifica se o campo codigo esta com espa�os em branco
-				if (codigoMateria.getText().equals("") || codigoMateria.getText().contains(" ")) {
-					
-					JOptionPane.showMessageDialog(null, "Campo código esta em branco!");
-				} else {
+				String codMateria = codigoMateria.getText().toUpperCase().replace(" ", "");
+				if (codMateria.length()<1){
+					JOptionPane.showMessageDialog(null, "Codigo Disciplina em Branco!");
+				}
+				else {
 					// se nao tiver em branco testa para ver se o codigo existe na lista
-					if (solicitacao.getDisciplinas().contains(codigoMateria.getText().toUpperCase())) {
-						JOptionPane.showMessageDialog(null,"Disciplina " + codigoMateria.getText().toUpperCase() + " - já cadastrada!");
+					if (solicitacao.getDisciplinas().contains(codMateria)) {
+						JOptionPane.showMessageDialog(null,"Disciplina " + codMateria + " - já cadastrada!");
 
 					} else {
 						// se não existir mostra o codigo que vc acabou de cadastrar e adiciona ele na lista
-						String n = codigoMateria.getText().toUpperCase();
+						String n = codMateria;
 						n = curso.VerificaNome(n);
 						//Verifica se a Disciplina solicitada está cadastrada
-						if (n.contains(codigoMateria.getText().toUpperCase())){
+						if (n.contains(codMateria)){
 							JOptionPane.showMessageDialog(null, "Disciplina não encontrada");
 						} else{
-							solicitacao.getDisciplinas().add(codigoMateria.getText().toUpperCase());
-							JOptionPane.showMessageDialog(null, "Disciplina " + codigoMateria.getText().toUpperCase() + " - " + n + " cadastrada com sucesso");
+							solicitacao.getDisciplinas().add(codMateria);
+							JOptionPane.showMessageDialog(null, "Disciplina " + codMateria + " - " + n + " cadastrada com sucesso");
 						}
 					}
 				}
@@ -190,17 +191,23 @@ public class FrameSolicitacao extends JFrame {
 		btnConsulta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				String m = codigoMateria.getText().toUpperCase().replace(" ", "");
-				m = curso.VerificaNome(m);
+				String codMateria = codigoMateria.getText().toUpperCase().replace(" ", "");
+				codMateria = curso.VerificaNome(codMateria);
 				
 				//Verifica se a Disciplina solicitada está cadastrada
-				if (m.equals(codigoMateria.getText().toUpperCase().replace(" ", ""))){
-					JOptionPane.showMessageDialog(null, "Disciplina não encontrada");
-				} else{
-					dicipsol.setText(m);
+				if (codMateria.length()<1){
+					JOptionPane.showMessageDialog(null, "Codigo Disciplina em Branco!");
 				}
-				
+				else{
+					if (codMateria.equals(codigoMateria.getText().toUpperCase().replace(" ", ""))){
+						JOptionPane.showMessageDialog(null, "Disciplina não encontrada");
+					}
+					else{
+						dicipsol.setText(codMateria);
+					}
+				}
 			}
+			
 		});
 		btnConsulta.setBounds(213, 225, 89, 23);
 		contentPane.add(btnConsulta);
