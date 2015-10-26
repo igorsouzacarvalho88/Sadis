@@ -110,43 +110,32 @@ public class FrameSolicitacao extends JFrame {
 
 		codigoMateria = new JTextField();
 		codigoMateria.addMouseListener(new MouseAdapter() {
-
 			public void mouseClicked(MouseEvent arg0) {
-				codigoMateria.setText(""); // faz com que o campo de codigos
-				// seja limpo sempre que clicar nele
-			}
-		});
+				codigoMateria.setText(""); // faz com que o campo de codigos seja limpo sempre que clicar nele
+				}
+			});
 		codigoMateria.setBounds(35, 225, 68, 20);
 		contentPane.add(codigoMateria);
-		codigoMateria.setColumns(10);
-		
-		JLabel lblInsiraOCodigo = new JLabel(
-				"Insira o codigo das diciplinas, uma a uma e clique em Ok");
+		codigoMateria.setColumns(10);	
+		JLabel lblInsiraOCodigo = new JLabel("Insira o codigo das diciplinas, uma a uma e clique em Ok");
 		lblInsiraOCodigo.setBounds(25, 204, 383, 14);
 		contentPane.add(lblInsiraOCodigo);
 
 		btnOk = new JButton("Ok");		
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				 
 				// verifica se o campo codigo esta com espa�os em branco
-				if (codigoMateria.getText().equals("")
-						|| codigoMateria.getText().equals(" ")) {
-
-					JOptionPane.showMessageDialog(null,
-							"Campo código esta em branco!");
+				if (codigoMateria.getText().equals("") || codigoMateria.getText().contains(" ")) {
+					
+					JOptionPane.showMessageDialog(null, "Campo código esta em branco!");
 				} else {
-					// se nao tiver em branco testa para ver se o codigo
-					// existe na lista
-					if (solicitacao.getDisciplinas().contains(codigoMateria
-							.getText().toUpperCase())) {
-
-						JOptionPane.showMessageDialog(null,
-								"Disciplina " + codigoMateria.getText().toUpperCase() + " - já cadastrada!");
+					// se nao tiver em branco testa para ver se o codigo existe na lista
+					if (solicitacao.getDisciplinas().contains(codigoMateria.getText().toUpperCase())) {
+						JOptionPane.showMessageDialog(null,"Disciplina " + codigoMateria.getText().toUpperCase() + " - já cadastrada!");
 
 					} else {
-						// se não existir mostra o codigo que vc acabou de
-						// cadastrar e adiciona ele na lista
+						// se não existir mostra o codigo que vc acabou de cadastrar e adiciona ele na lista
 						String n = codigoMateria.getText().toUpperCase();
 						n = curso.VerificaNome(n);
 						//Verifica se a Disciplina solicitada está cadastrada
@@ -195,32 +184,32 @@ public class FrameSolicitacao extends JFrame {
 		lblConsultaVerificaA.setBounds(25, 300, 187, 14);
 		contentPane.add(lblConsultaVerificaA);
 		
+		
+		
 		JButton btnConsulta = new JButton("Consulta");
 		btnConsulta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				String m = codigoMateria.getText().toUpperCase();
+				
+				String m = codigoMateria.getText().toUpperCase().replace(" ", "");
 				m = curso.VerificaNome(m);
+				
 				//Verifica se a Disciplina solicitada está cadastrada
-				if (m.contains(codigoMateria.getText().toUpperCase())){
+				if (m.equals(codigoMateria.getText().toUpperCase().replace(" ", ""))){
 					JOptionPane.showMessageDialog(null, "Disciplina não encontrada");
 				} else{
 					dicipsol.setText(m);
 				}
+				
 			}
 		});
 		btnConsulta.setBounds(213, 225, 89, 23);
 		contentPane.add(btnConsulta);
 		
 		btnEnviar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) { // EVENTO ao clicar
-				// no bot�o enviar
-				//verifica se os campos do formulario não estão em branco
-				if (nome.getText().equals("") || matricula.getText().equals("")
-						|| telefone.getText().equals("")
-						|| email.getText().equals("")) {
+			public void actionPerformed(ActionEvent arg0) { // EVENTO ao clicar no bot�o enviar verifica se os campos do formulario não estão em branco
+				if (nome.getText().equals("") || matricula.getText().equals("") || telefone.getText().equals("") || email.getText().equals("")) {
 
-					JOptionPane.showMessageDialog(null,
-							"Verifique os campos em branco no formulario");
+					JOptionPane.showMessageDialog(null, "Verifique os campos em branco no formulario");
 				} else {
 					//se não tiver em branco ele seta todos os atributos
 					
@@ -236,12 +225,10 @@ public class FrameSolicitacao extends JFrame {
 					//SAlLVAR SOLICITACAO NO BANCO DE DADOS
 					//daoSolicitacao.addSolicitacao(solicitacao);
 					
-					JOptionPane.showMessageDialog(null,
-							"Solicitação enviada com sucesso");
+					JOptionPane.showMessageDialog(null, "Solicitação enviada com sucesso");
 
 					//realiza o aproveitamento ou não das disciplinas que o aluno solicitou
-					aproveitamento.setDisciplinasAproveitadas(solicitacao,
-							curso);
+					aproveitamento.setDisciplinasAproveitadas(solicitacao, curso);
 
 					// imprime os dados do aluno na tela
 
