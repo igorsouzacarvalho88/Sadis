@@ -1,7 +1,6 @@
 package programa.principal;
 
 import java.awt.event.ActionEvent;
-
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -24,9 +23,12 @@ import universidade.Curso;
 import universidade.Solicitacao;
 
 import java.awt.Toolkit;
+
 import javax.swing.JCheckBoxMenuItem;
+
 import java.awt.Label;
 import java.awt.Color;
+import java.awt.TextArea;
 
 public class FrameSolicitacao extends JFrame {
 
@@ -49,12 +51,13 @@ public class FrameSolicitacao extends JFrame {
 	private JLabel dicipsol;
 
 	public FrameSolicitacao(final Curso curso) {
+		setForeground(Color.GRAY);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\thiago\\git\\Sadis\\Sadis\\sadis3.jpg"));
 		setTitle("Formulario de Solicitação");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 486, 604);
 		contentPane = new JPanel();
-		contentPane.setForeground(Color.RED);
+		contentPane.setForeground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		JButton btnEnviar = new JButton("Enviar");
@@ -172,7 +175,7 @@ public class FrameSolicitacao extends JFrame {
 		lblI.setBounds(25, 369, 383, 14);
 		contentPane.add(lblI);
 		
-		final JEditorPane justificativa = new JEditorPane();
+		final TextArea justificativa = new TextArea("",4,30, TextArea.SCROLLBARS_VERTICAL_ONLY);
 		justificativa.setBounds(35, 394, 373, 98);
 		contentPane.add(justificativa);
 		
