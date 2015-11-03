@@ -131,7 +131,7 @@ public class FrameSolicitacao extends JFrame {
 				// verifica se o campo codigo esta com espa�os em branco
 				String codMateria = codigoMateria.getText().toUpperCase().replace(" ", "");
 				if (codMateria.length()<1){
-					JOptionPane.showMessageDialog(null, "Codigo Disciplina em Branco!");
+					JOptionPane.showMessageDialog(null, "Código disciplina em branco!");
 				}
 				else {
 					// se nao tiver em branco testa para ver se o codigo existe na lista
@@ -199,7 +199,7 @@ public class FrameSolicitacao extends JFrame {
 				
 				//Verifica se a Disciplina solicitada está cadastrada
 				if (codMateria.length()<1){
-					JOptionPane.showMessageDialog(null, "Codigo Disciplina em Branco!");
+					JOptionPane.showMessageDialog(null, "Código disciplina em branco!");
 				}
 				else{
 					if (codMateria.equals(codigoMateria.getText().toUpperCase().replace(" ", ""))){

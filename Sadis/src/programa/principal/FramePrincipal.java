@@ -23,6 +23,7 @@ import connexaoBD.IAlunoDAO;
 
 import java.awt.Font;
 import java.awt.Toolkit;
+import javax.swing.UIManager;
 
 
 public class FramePrincipal extends JFrame {
@@ -37,6 +38,11 @@ public class FramePrincipal extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		try {
+			UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
