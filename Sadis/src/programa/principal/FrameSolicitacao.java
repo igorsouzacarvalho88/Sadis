@@ -217,10 +217,27 @@ public class FrameSolicitacao extends JFrame {
 		
 		btnEnviar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) { // EVENTO ao clicar no bot�o enviar verifica se os campos do formulario não estão em branco
-				if (nome.getText().equals("") || matricula.getText().equals("") || telefone.getText().equals("") || email.getText().equals("")) {
-
-					JOptionPane.showMessageDialog(null, "Verifique os campos em branco no formulario");
-				} else {
+				int v = 1;
+				if ((!email.getText().contains("@")) || (!email.getText().contains("."))){
+					JOptionPane.showMessageDialog(null, "Campo e-mail incorreto");
+					lblEmail.setForeground(Color.RED);
+					v=0;
+				}
+				if ((!telefone.getText().matches("[0-9( )-]*"))){
+					JOptionPane.showMessageDialog(null, "Campo telefone incorreto");
+					lblTelefone.setForeground(Color.RED);	
+					v=0;
+				}
+				if ((!matricula.getText().matches("[0-9]*")) || (matricula.getText().length()>9) || (matricula.getText().length()<9)){
+					JOptionPane.showMessageDialog(null, "Campo matricula incorreto");
+					lblInsiraSuaMatricula.setForeground(Color.RED);	
+					v=0;
+				}
+				
+				else if (v!=0){
+					if (nome.getText().equals("") || matricula.getText().equals("") || telefone.getText().equals("") || email.getText().equals("")) {
+						JOptionPane.showMessageDialog(null, "Verifique os campos em branco no formulario");
+					} else {
 					//se não tiver em branco ele seta todos os atributos
 					
 					solicitacao.setNome(nome.getText().toUpperCase());
@@ -244,9 +261,8 @@ public class FrameSolicitacao extends JFrame {
 
 					FrameRelatorio frameRelatorio = new FrameRelatorio(solicitacao, aproveitamento,curso);
 					dispose();
-
+					}
 				}
-
 				// Aproveitamento.comparaSolicitacaoGrade(solicitacao, curso2);
 
 				// a fun��o acima vai receber a solicitacao, e o curso no qual o
