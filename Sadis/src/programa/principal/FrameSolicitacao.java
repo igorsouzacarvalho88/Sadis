@@ -190,19 +190,19 @@ public class FrameSolicitacao extends JFrame {
 		btnConsulta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				String codMateria = codigoMateria.getText().toUpperCase().replace(" ", "");
-				codMateria = curso.VerificaNome(codMateria);
+				String Materia = codigoMateria.getText().toUpperCase().replace(" ", "");
+				Materia = curso.VerificaNome(Materia);
 				
 				//Verifica se a Disciplina solicitada está cadastrada
-				if (codMateria.length()<1){
+				if (Materia.length()<1){
 					JOptionPane.showMessageDialog(null, "Código disciplina em branco!");
 				}
 				else{
-					if (codMateria.equals(codigoMateria.getText().toUpperCase().replace(" ", ""))){
+					if (Materia.equals(codigoMateria.getText().toUpperCase().replace(" ", ""))){
 						JOptionPane.showMessageDialog(null, "Disciplina não encontrada");
 					}
 					else{
-						dicipsol.setText(codMateria);
+						dicipsol.setText(Materia);
 					}
 				}
 			}
