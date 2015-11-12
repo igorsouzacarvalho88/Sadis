@@ -13,36 +13,7 @@ public class Solicitacao extends Aluno {
 	private List<String> disciplinasTest = new ArrayList<String>();
 
 	
-	// metodos getters and setters para as
-	/*public String getAlunoNome() {
 	
-		return getNome();
-	
-	}
-	
-	public String getAlunoEmail() {
-	
-		return getEmail();
-	
-	}
-
-	public String getAlunoTelefone() {
-	
-		return getTelefone();
-	
-	}
-
-	public String getAlunoMatricula() {
-	
-		return getMatricula();
-	
-	}
-	
-	public void setAlunoNome(String nome) {
-	
-		this.setNome(nome);
-	
-	}*/
 	
 	public String getEsclarecimentoSolicitacao() {
 	
@@ -56,30 +27,7 @@ public class Solicitacao extends Aluno {
 	
 	}
 	
-	/*public void setAlunoMatricula(String matricula) {
 	
-		this.setMatricula(matricula);
-	
-	}
-	
-	public void setAlunoTelefone(String telefone) {
-	
-		this.setTelefone(telefone);
-	
-	}
-	
-	public void setAlunoEmail(String email) {
-	
-		this.setEmail(email);
-	
-	}
-	
-	public void setAluno(Aluno aluno) {
-	
-		this.aluno = aluno;
-	
-	}
-*/
 
 	public void setEsclarecimentoSolicitacao(String esclarecimentoSolicitacao) {
 	

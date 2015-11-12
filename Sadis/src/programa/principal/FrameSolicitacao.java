@@ -235,11 +235,7 @@ public class FrameSolicitacao extends JFrame {
 					solicitacao.setEmail(email.getText().toUpperCase());
 					solicitacao.setEsclarecimentoSolicitacao(justificativa.getText());
 					
-					//SALVA O ALUNO NO BANCO DE DADOS
-					//daoAluno.addAluno(solicitacao);
 					
-					//SAlLVAR SOLICITACAO NO BANCO DE DADOS
-					//daoSolicitacao.addSolicitacao(solicitacao);
 					
 					JOptionPane.showMessageDialog(null, "Solicitação enviada com sucesso");
 
@@ -252,12 +248,7 @@ public class FrameSolicitacao extends JFrame {
 					dispose();
 					}
 				}
-				// Aproveitamento.comparaSolicitacaoGrade(solicitacao, curso2);
-
-				// a fun��o acima vai receber a solicitacao, e o curso no qual o
-				// cara quer ir eu ainda vou fazer ele escolher
-				// entre 2 cursos, mas preciso ver qq essa comparacao vai
-				// usar... gogogo
+			
 			}
 		});
 
@@ -266,7 +257,5 @@ public class FrameSolicitacao extends JFrame {
 	// instancia solicitação e aproveitamento
 
 	Solicitacao solicitacao = new Solicitacao();
-	//private IAlunoDAO daoAluno = new AlunoDAO();
-	//private ISolicitacaoDAO daoSolicitacao = new SolicitacaoDAO();
 	Aproveitamento aproveitamento = new Aproveitamento();
 }

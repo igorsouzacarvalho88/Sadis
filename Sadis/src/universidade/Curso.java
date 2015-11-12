@@ -988,15 +988,5 @@ public class Curso {
 	
 	
 
-	// public static void imprimeCursos(List<Curso> cursos) {
-	//
-	//
-	// System.out.println("Os Cursos Cadastrados São\n");
-	//
-	// for (Curso item : cursos) {
-	//
-	// System.out.println(item.nome);
-	//
-	// }
-	// }
+	
 }
