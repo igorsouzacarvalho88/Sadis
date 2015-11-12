@@ -2,10 +2,7 @@ package universidade;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 
 public class Solicitacao extends Aluno {
 

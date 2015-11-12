@@ -18,8 +18,7 @@ import universidade.*;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
-import connexaoBD.AlunoDAO;
-import connexaoBD.IAlunoDAO;
+
 
 import java.awt.Font;
 import java.awt.Toolkit;

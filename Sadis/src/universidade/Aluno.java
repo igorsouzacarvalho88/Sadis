@@ -1,6 +1,5 @@
 package universidade;
 
-import javax.swing.JTextField;
 
 
 public class Aluno {

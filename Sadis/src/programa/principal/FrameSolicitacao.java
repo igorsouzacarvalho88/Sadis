@@ -6,7 +6,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
-import javax.swing.JEditorPane;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -14,31 +14,20 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import connexaoBD.AlunoDAO;
-import connexaoBD.IAlunoDAO;
-import connexaoBD.ISolicitacaoDAO;
-import connexaoBD.SolicitacaoDAO;
+
 import universidade.Aproveitamento;
 import universidade.Curso;
 import universidade.Solicitacao;
 
 import java.awt.Toolkit;
 
-import javax.swing.JCheckBoxMenuItem;
 
-import java.awt.Label;
+
+
 import java.awt.Color;
 import java.awt.TextArea;
-import java.awt.Button;
-import javax.swing.JToggleButton;
-import javax.swing.JToolBar;
-import javax.swing.JLayeredPane;
-import java.awt.CardLayout;
-import javax.swing.border.LineBorder;
-import javax.swing.JDesktopPane;
-import java.awt.Font;
-import javax.swing.JProgressBar;
-import javax.swing.JTextPane;
+
+
 
 public class FrameSolicitacao extends JFrame {
 
